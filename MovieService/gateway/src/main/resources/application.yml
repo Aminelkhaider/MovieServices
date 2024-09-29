@@ -1,0 +1,40 @@
+server:
+  port: 9999
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: movies-ms
+          uri: lb://MOVIES-MS
+          predicates:
+            - Path=/movies/**
+          filters:
+            - AuthenticationFilter
+
+        - id: recommendation-service
+          uri: lb://RECOMMENDATION-SERVICE
+          predicates:
+            - Path=/recommendation/**
+          filters:
+            - AuthenticationFilter
+
+        - id: payment-ms
+          uri: lb://PAYMENT-MS
+          predicates:
+            - Path=/pay/**
+          filters:
+            - AuthenticationFilter
+
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/auth/**
+
+application:
+  name: GATEWAY-SERVICE
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

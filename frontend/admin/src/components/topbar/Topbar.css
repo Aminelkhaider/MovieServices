@@ -1,0 +1,102 @@
+.topbar{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.topbar-Wrapper{
+    display: flex;
+    padding: 0px 20px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.topbar-right{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.topbar-Number{
+    position: absolute;
+    margin-left:-0.5rem ;
+    margin-top:-0.4rem ;
+    color: red;
+    font-size: 17px;
+    font-weight: 600;
+    
+}
+.topbar-Image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.topbar-Icon{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+/*
+.word span:nth-child(1) {
+    --delay: 0;
+  }
+  
+  .word span:nth-child(2) {
+    --delay: 1;
+  }
+  
+  .word span:nth-child(3) {
+    --delay: 2;
+  }
+  .word span:nth-child(4) {
+    --delay: 3;
+  }
+
+  .word {
+    font-size: 24px;
+  }
+  
+  .word span {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-delay: calc(var(--delay) * 0.2s); /* La variable --delay permet de définir un temps de décalage entre chaque lettre */
+   /* animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+*/
+
+
+.logo{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding-top: 5px;
+    }
+
+
+
+  /* Div contenant le mot */
+.worde {
+    overflow: hidden;
+  }
+  
+  /* Animation des lettres */
+  @keyframes reveal {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  /* Application de l'animation à la div contenant le mot */
+  .worde {
+    animation: reveal 1s ease-out;
+  }
